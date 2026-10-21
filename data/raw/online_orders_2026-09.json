@@ -1,0 +1,1831 @@
+{
+  "export_date": "2026-10-01",
+  "store": "online",
+  "orders": [
+    {
+      "order_ref": "WEB-30001",
+      "placed_at": "2026-09-08T10:21:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1329,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30002",
+      "placed_at": "2026-09-23T17:09:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2004",
+          "qty": 1,
+          "price": 299.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1126,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30003",
+      "placed_at": "2026-09-09T19:06:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        },
+        {
+          "sku": "EL-1005",
+          "qty": 2,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1336,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30004",
+      "placed_at": "2026-09-26T12:46:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": null,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1222,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30005",
+      "placed_at": "2026-09-09T11:56:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 2,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1237,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30006",
+      "placed_at": "2026-09-08T16:40:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1237,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30007",
+      "placed_at": "2026-09-01T19:15:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1358,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30008",
+      "placed_at": "2026-09-21T19:37:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        },
+        {
+          "sku": "GR-6002",
+          "qty": 2,
+          "price": 169.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1347,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30009",
+      "placed_at": "2026-09-04T14:15:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        },
+        {
+          "sku": "BP-3002",
+          "qty": 1,
+          "price": 139.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1365,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30010",
+      "placed_at": "2026-09-01T17:54:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3002",
+          "qty": 1,
+          "price": 139.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1265,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30011",
+      "placed_at": "not a date",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        },
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1082,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30012",
+      "placed_at": "2026-09-15T16:13:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1002",
+          "qty": 2,
+          "price": 199.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1262,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30013",
+      "placed_at": "2026-09-15T11:43:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        },
+        {
+          "sku": "SO-4004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1200,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30014",
+      "placed_at": "2026-09-13T14:03:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        },
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1038,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30015",
+      "placed_at": "2026-09-24T14:33:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        },
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        },
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1200,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30016",
+      "placed_at": "2026-09-03T20:51:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 2,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1240,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30017",
+      "placed_at": "2026-09-26T14:29:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 1,
+          "price": 449.0
+        },
+        {
+          "sku": "BP-3001",
+          "qty": 2,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1389,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30018",
+      "placed_at": "2026-09-23T14:43:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        },
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1218,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30019",
+      "placed_at": "2026-09-09T13:15:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1164,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30020",
+      "placed_at": "2026-09-22T13:09:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1197,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30021",
+      "placed_at": "2026-09-26T10:33:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 2,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1324,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30022",
+      "placed_at": "2026-09-04T17:09:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2002",
+          "qty": 1,
+          "price": 349.0
+        },
+        {
+          "sku": "EL-1002",
+          "qty": 1,
+          "price": 199.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1095,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30023",
+      "placed_at": "2026-09-13T20:34:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-0000",
+          "qty": 1,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1312,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30024",
+      "placed_at": "2026-09-23T11:33:00+02:00",
+      "lines": [
+        {
+          "sku": "SO-4004",
+          "qty": 2,
+          "price": 229.0
+        },
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1379,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30025",
+      "placed_at": "2026-09-27T10:30:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1002",
+          "qty": 1,
+          "price": 199.0
+        },
+        {
+          "sku": "SO-4004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1285,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30026",
+      "placed_at": "2026-09-08T15:10:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 1,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1082,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30027",
+      "placed_at": "2026-09-10T15:23:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1214,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30028",
+      "placed_at": "2026-09-01T08:39:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1349,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30029",
+      "placed_at": "2026-09-05T08:13:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1002",
+          "qty": 1,
+          "price": 199.0
+        },
+        {
+          "sku": "SO-4004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1320,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30030",
+      "placed_at": "2026-09-16T20:33:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1145,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30031",
+      "placed_at": "2026-09-27T12:18:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2004",
+          "qty": 1,
+          "price": 299.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1252,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30032",
+      "placed_at": "2026-09-12T11:41:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2004",
+          "qty": 2,
+          "price": 299.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1060,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30033",
+      "placed_at": "2026-09-19T18:05:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1204,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30034",
+      "placed_at": "2026-09-04T08:02:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1243,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30035",
+      "placed_at": "2026-09-22T19:44:00+02:00",
+      "lines": [
+        {
+          "sku": "SO-4004",
+          "qty": 1,
+          "price": 229.0
+        },
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1108,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30036",
+      "placed_at": "2026-09-06T08:26:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        },
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1335,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30037",
+      "placed_at": "2026-09-18T19:16:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 1,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1094,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30038",
+      "placed_at": "2026-09-21T17:59:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1254,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30039",
+      "placed_at": "2026-09-15T09:00:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        },
+        {
+          "sku": "BP-3002",
+          "qty": 2,
+          "price": 139.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1304,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30040",
+      "placed_at": "2026-09-03T18:30:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3002",
+          "qty": 1,
+          "price": 139.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1077,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30041",
+      "placed_at": "2026-09-04T09:13:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1066,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30042",
+      "placed_at": "2026-09-15T19:47:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1025,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30043",
+      "placed_at": "2026-09-03T12:40:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6002",
+          "qty": 2,
+          "price": 169.0
+        },
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1235,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30044",
+      "placed_at": "2026-09-27T17:05:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        },
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        },
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1159,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30045",
+      "placed_at": "2026-09-19T19:28:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 1,
+          "price": 449.0
+        },
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1346,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30046",
+      "placed_at": "2026-09-21T10:40:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1244,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30047",
+      "placed_at": "2026-09-10T12:03:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        },
+        {
+          "sku": "HK-2004",
+          "qty": 1,
+          "price": 299.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1310,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30048",
+      "placed_at": "2026-09-08T14:24:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        },
+        {
+          "sku": "HK-2004",
+          "qty": 2,
+          "price": 299.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1308,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30049",
+      "placed_at": "2026-09-14T10:37:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2004",
+          "qty": 1,
+          "price": 299.0
+        },
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1147,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30050",
+      "placed_at": "2026-09-26T16:43:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        },
+        {
+          "sku": "EL-1005",
+          "qty": 2,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1177,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30051",
+      "placed_at": "2026-09-07T20:48:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1158,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30052",
+      "placed_at": "2026-09-25T08:50:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        },
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1235,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30053",
+      "placed_at": "2026-09-08T14:37:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1267,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30054",
+      "placed_at": "2026-09-07T11:05:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1358,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30055",
+      "placed_at": "2026-09-25T16:54:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1126,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30056",
+      "placed_at": "2026-09-11T17:01:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        },
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        },
+        {
+          "sku": "EL-1002",
+          "qty": 1,
+          "price": 199.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1143,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30057",
+      "placed_at": "2026-09-28T17:31:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2002",
+          "qty": 2,
+          "price": 349.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1133,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30058",
+      "placed_at": "2026-09-27T17:08:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3004",
+          "qty": 1,
+          "price": 1199.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1019,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30059",
+      "placed_at": "2026-09-01T08:02:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 1,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1361,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30060",
+      "placed_at": "2026-09-21T14:59:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1002",
+          "qty": 2,
+          "price": 199.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1361,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30061",
+      "placed_at": "2026-09-03T18:32:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1093,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30062",
+      "placed_at": "2026-09-02T12:22:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 2,
+          "price": 229.0
+        },
+        {
+          "sku": "HK-2002",
+          "qty": 1,
+          "price": 349.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1283,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30063",
+      "placed_at": "2026-09-21T20:30:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        },
+        {
+          "sku": "HK-2004",
+          "qty": 1,
+          "price": 299.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1051,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30064",
+      "placed_at": "2026-09-22T19:19:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 2,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1388,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30065",
+      "placed_at": "2026-09-04T13:30:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1086,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30066",
+      "placed_at": "2026-09-29T08:29:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 2,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1018,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30067",
+      "placed_at": "2026-09-15T09:59:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2002",
+          "qty": 2,
+          "price": 349.0
+        },
+        {
+          "sku": "EL-1002",
+          "qty": 2,
+          "price": 199.0
+        },
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1011,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30068",
+      "placed_at": "2026-09-08T15:07:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1073,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30069",
+      "placed_at": "2026-09-15T16:56:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1224,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30070",
+      "placed_at": "2026-09-01T12:36:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3002",
+          "qty": 1,
+          "price": 139.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1171,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30071",
+      "placed_at": "2026-09-29T15:07:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1002",
+          "qty": 1,
+          "price": 199.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1262,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30072",
+      "placed_at": "2026-09-27T12:07:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6004",
+          "qty": 2,
+          "price": 229.0
+        },
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1386,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30073",
+      "placed_at": "2026-09-29T10:03:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3002",
+          "qty": 2,
+          "price": 139.0
+        },
+        {
+          "sku": "HK-2004",
+          "qty": 1,
+          "price": 299.0
+        },
+        {
+          "sku": "HK-2002",
+          "qty": 1,
+          "price": 349.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1073,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30074",
+      "placed_at": "2026-09-05T15:00:00+02:00",
+      "lines": [
+        {
+          "sku": "SO-4004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1095,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30075",
+      "placed_at": "2026-09-19T10:08:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3002",
+          "qty": 1,
+          "price": 139.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1267,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30076",
+      "placed_at": "2026-09-20T19:31:00+02:00",
+      "lines": [
+        {
+          "sku": "HK-2002",
+          "qty": 1,
+          "price": 349.0
+        },
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1089,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30077",
+      "placed_at": "2026-09-26T11:37:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1103,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30078",
+      "placed_at": "2026-09-27T19:58:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1265,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30079",
+      "placed_at": "2026-09-16T09:00:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 2,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1390,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30080",
+      "placed_at": "2026-09-06T17:53:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1018,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30081",
+      "placed_at": "2026-09-30T15:33:00+02:00",
+      "lines": [
+        {
+          "sku": "OS-5002",
+          "qty": 2,
+          "price": 89.0
+        },
+        {
+          "sku": "GR-6004",
+          "qty": 1,
+          "price": 229.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1061,
+        "province": "KwaZulu-Natal"
+      }
+    },
+    {
+      "order_ref": "WEB-30082",
+      "placed_at": "2026-09-29T08:18:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 2,
+          "price": 229.0
+        },
+        {
+          "sku": "GR-6002",
+          "qty": 1,
+          "price": 169.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1374,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30083",
+      "placed_at": "2026-09-18T10:01:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 1,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1045,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30084",
+      "placed_at": "2026-09-01T08:06:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 1,
+          "price": 449.0
+        },
+        {
+          "sku": "EL-1002",
+          "qty": 1,
+          "price": 199.0
+        }
+      ],
+      "payment": {
+        "method": "eft"
+      },
+      "customer": {
+        "id": 1133,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30085",
+      "placed_at": "2026-09-15T09:22:00+02:00",
+      "lines": [
+        {
+          "sku": "GR-6001",
+          "qty": 1,
+          "price": 79.0
+        },
+        {
+          "sku": "OS-5002",
+          "qty": 1,
+          "price": 89.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1367,
+        "province": "Western Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30086",
+      "placed_at": "2026-09-19T16:48:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1002",
+          "qty": 1,
+          "price": 199.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1056,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30087",
+      "placed_at": "2026-09-08T11:09:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 1,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1382,
+        "province": "Eastern Cape"
+      }
+    },
+    {
+      "order_ref": "WEB-30088",
+      "placed_at": "2026-09-13T19:26:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1001",
+          "qty": 2,
+          "price": 549.0
+        }
+      ],
+      "payment": {
+        "method": "card"
+      },
+      "customer": {
+        "id": 1202,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30089",
+      "placed_at": "2026-09-14T17:51:00+02:00",
+      "lines": [
+        {
+          "sku": "BP-3001",
+          "qty": 1,
+          "price": 229.0
+        },
+        {
+          "sku": "BP-3002",
+          "qty": 1,
+          "price": 139.0
+        }
+      ],
+      "payment": {
+        "method": "payfast"
+      },
+      "customer": {
+        "id": 1205,
+        "province": "Gauteng"
+      }
+    },
+    {
+      "order_ref": "WEB-30090",
+      "placed_at": "2026-09-30T13:15:00+02:00",
+      "lines": [
+        {
+          "sku": "EL-1005",
+          "qty": 2,
+          "price": 449.0
+        }
+      ],
+      "payment": {
+        "method": "snapscan"
+      },
+      "customer": {
+        "id": 1339,
+        "province": "Gauteng"
+      }
+    }
+  ]
+}
