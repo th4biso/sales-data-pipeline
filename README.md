@@ -6,7 +6,7 @@ A Python ETL pipeline that collects sales exports from three branches of a retai
 
 **Live dashboard:** https://th4biso.github.io/sales-data-pipeline/
 
-**Tech:** Python · SQLite · GitHub Actions · GitHub Pages · `unittest` (standard library only, nothing to install)
+**Tech:** Python · SQLite · GitHub Actions · GitHub Pages · Docker · `unittest` (standard library only, nothing to install)
 
 ## The problem
 
@@ -88,6 +88,32 @@ Done: 438 new sales saved, 16 rows rejected (see output/rejects.csv)
 
 Running it again straight away saves `0` new sales, because they are already in the database.
 
+## Running it with Docker
+
+The `Dockerfile` packages the pipeline with Python 3.12 on Linux, so it runs the same on any machine without installing Python:
+
+| Dockerfile line | What it does |
+|---|---|
+| `FROM python:3.12-slim` | Start from Linux (Debian) with Python 3.12 |
+| `WORKDIR /app` | Work inside `/app` |
+| `COPY . .` | Copy the project in (`.dockerignore` leaves out `output/`, `.git/` and `__pycache__/`) |
+| `CMD ["python", "run_pipeline.py"]` | Run the pipeline when the container starts |
+
+Build the image, then run the pipeline in a container. The volume (`-v`) saves the output to your computer (PowerShell):
+
+```bash
+docker build -t sales-pipeline .
+docker run --rm -v "${PWD}\output:/app/output" sales-pipeline
+```
+
+Serve the dashboard from an nginx container at http://localhost:8080:
+
+```bash
+docker run -d -p 8080:80 --name dashboard -v "${PWD}\output:/usr/share/nginx/html:ro" nginx
+docker stop dashboard
+docker rm dashboard
+```
+
 ## CI/CD
 
 `.github/workflows/tests.yml` has two jobs:
@@ -108,5 +134,5 @@ If a test fails, nothing is deployed and GitHub sends an email.
 
 ## Next steps
 
-- Package it in Docker.
+- Build the Docker image in GitHub Actions and push it to a container registry.
 - Load into PostgreSQL instead of SQLite.
