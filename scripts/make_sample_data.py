@@ -1,15 +1,7 @@
-"""Create the sample raw exports in data/raw and the product catalogue in data/reference.
+"""Creates the sample sales files, with some mistakes added on purpose.
 
-Three branches export the same kind of data in three different shapes, the way
-real point-of-sale systems do. A share of the rows is deliberately broken
-(bad dates, unknown products, impossible quantities, duplicates, odd number
-formats) so the pipeline has something to clean.
-
-Usage:
-    python scripts/make_sample_data.py
+Run from the project folder: python scripts/make_sample_data.py
 """
-
-from __future__ import annotations
 
 import csv
 import json
@@ -17,9 +9,8 @@ import random
 from datetime import datetime, timedelta
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "raw"
-REFERENCE = ROOT / "data" / "reference"
+RAW = Path("data/raw")
+REFERENCE = Path("data/reference")
 rng = random.Random(7)
 
 CATALOGUE = [
@@ -136,7 +127,7 @@ def main() -> None:
     sandton()
     durban()
     online()
-    print(f"Sample data written to {RAW.relative_to(ROOT)} and {REFERENCE.relative_to(ROOT)}")
+    print(f"Sample data written to {RAW} and {REFERENCE}")
 
 
 if __name__ == "__main__":

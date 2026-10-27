@@ -1,5 +1,3 @@
-"""Reports: SQL queries on the database, each saved as a CSV file."""
-
 import csv
 
 REPORTS = {
@@ -33,5 +31,5 @@ def write_reports(conn, report_dir):
         result = conn.execute(sql)
         with open(report_dir / file_name, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
-            writer.writerow([column[0] for column in result.description])  # header row
+            writer.writerow([column[0] for column in result.description])
             writer.writerows(result.fetchall())

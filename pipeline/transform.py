@@ -1,9 +1,3 @@
-"""Transform: clean and check every row.
-
-Good rows are standardised (product codes, prices, dates, payment methods).
-Bad rows are rejected with a plain-English reason, so someone can fix them.
-"""
-
 import csv
 from datetime import datetime
 
@@ -11,7 +5,6 @@ from .config import PAYMENT_METHODS
 
 
 def load_products(path):
-    """Read the product list into {sku: {"name", "category", "price"}}."""
     with open(path, newline="", encoding="utf-8-sig") as f:
         return {row["sku"]: {"name": row["product_name"], "category": row["category"],
                              "price": float(row["list_price"])}
@@ -19,14 +12,11 @@ def load_products(path):
 
 
 def text(value):
-    """Turn any value (text, number or missing) into trimmed text."""
     return "" if value is None else str(value).strip()
 
 
-# Each clean_... function returns a clean value, or raises ValueError with the reason.
-
 def clean_price(value):
-    """'199.00', 'R1 199,00' and 229.0 all become a number."""
+    # "R1 199,00" -> 1199.0
     price = text(value).upper().replace("R", "").replace(" ", "").replace(",", ".")
     if not price:
         raise ValueError("missing price")
@@ -49,7 +39,6 @@ def clean_quantity(value):
 
 
 def clean_date(value, date_format):
-    """Read the date in the branch's own format and return it as 2026-09-14 18:03."""
     try:
         return datetime.strptime(text(value), date_format).strftime("%Y-%m-%d %H:%M")
     except ValueError:
@@ -57,7 +46,7 @@ def clean_date(value, date_format):
 
 
 def clean_sku(value):
-    """'el-1001', ' EL-1001 ' and 'EL1001' all become 'EL-1001'."""
+    # "el1001" -> "EL-1001"
     sku = text(value).upper().replace(" ", "")
     if len(sku) == 6 and "-" not in sku:
         sku = sku[:2] + "-" + sku[2:]
@@ -65,12 +54,10 @@ def clean_sku(value):
 
 
 def clean_payment(value):
-    """'Credit Card' -> 'card', 'SNAPSCAN' -> 'mobile'. Anything unknown -> 'other'."""
     return PAYMENT_METHODS.get(text(value).lower(), "other")
 
 
 def clean_row(row, products, date_format):
-    """Check one row. Returns the clean sale, or raises ValueError with the reason."""
     transaction_id = text(row["transaction_id"]).upper()
     if not transaction_id:
         raise ValueError("missing transaction id")
@@ -86,7 +73,7 @@ def clean_row(row, products, date_format):
 
     quantity = clean_quantity(row["quantity"])
     price = clean_price(row["price"])
-    # A price far from the catalogue price is probably a typing mistake.
+    # A price far from the list price is probably a typing mistake.
     if price > product["price"] * 2 or price < product["price"] / 2:
         raise ValueError(f"price {price} is far from the list price {product['price']}")
 
@@ -106,7 +93,6 @@ def clean_row(row, products, date_format):
 
 
 def transform(rows, products, date_format):
-    """Clean every row of one file. Returns (clean sales, rejected rows)."""
     clean, rejected = [], []
     seen = set()
     for row in rows:
@@ -115,7 +101,6 @@ def transform(rows, products, date_format):
         except ValueError as problem:
             rejected.append({**row, "reason": str(problem)})
             continue
-        # The same transaction twice in one file: keep the first, reject the copy.
         if sale["transaction_id"] in seen:
             rejected.append({**row, "reason": "duplicate transaction"})
             continue

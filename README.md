@@ -54,6 +54,8 @@ Every sale has a unique key (branch + transaction ID), and new sales are saved w
 
 ## Running it
 
+Run these from the `sales-data-pipeline` folder:
+
 ```bash
 python run_pipeline.py                            # run the pipeline
 python -m unittest discover -s tests -t . -v      # run the 19 tests

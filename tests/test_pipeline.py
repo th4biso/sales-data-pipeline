@@ -1,5 +1,3 @@
-"""End-to-end tests: run the whole pipeline on a copy of the sample data in a temporary folder."""
-
 import csv
 import logging
 import shutil
@@ -13,6 +11,7 @@ from pipeline import config
 
 
 class PipelineTests(unittest.TestCase):
+    # Each test runs the whole pipeline on a copy of the sample data in a temporary folder.
     def setUp(self):
         logging.disable(logging.CRITICAL)
         self.tmp = Path(tempfile.mkdtemp())

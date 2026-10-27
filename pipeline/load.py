@@ -1,5 +1,3 @@
-"""Load: save clean sales into a SQLite database, and rejected rows into a CSV file."""
-
 import csv
 import sqlite3
 
@@ -16,12 +14,11 @@ CREATE TABLE IF NOT EXISTS sales (
     line_total      REAL    NOT NULL,
     payment_method  TEXT    NOT NULL,
     source_file     TEXT    NOT NULL,
-    PRIMARY KEY (branch, transaction_id)    -- the same sale can never be saved twice
+    PRIMARY KEY (branch, transaction_id)
 )
 """
 
-# INSERT OR IGNORE: if the sale is already in the database, skip it.
-# That is what makes the pipeline safe to run again and again.
+# OR IGNORE skips sales that are already saved, so running twice never creates duplicates.
 INSERT_SALE = """
 INSERT OR IGNORE INTO sales (branch, transaction_id, sold_at, sku, product_name, category,
                              quantity, unit_price, line_total, payment_method, source_file)
@@ -40,11 +37,10 @@ def connect(db_path):
 
 
 def save_sales(conn, sales):
-    """Save the sales and return how many were new."""
     before = conn.total_changes
-    with conn:  # one transaction: either every row is saved or none are
+    with conn:
         conn.executemany(INSERT_SALE, sales)
-    return conn.total_changes - before
+    return conn.total_changes - before  # number of new sales
 
 
 def save_rejects(path, rejected):

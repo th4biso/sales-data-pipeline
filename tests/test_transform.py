@@ -1,5 +1,3 @@
-"""Unit tests: each cleaning rule on its own."""
-
 import unittest
 
 from pipeline.transform import (clean_date, clean_payment, clean_price, clean_quantity, clean_row, clean_sku,
@@ -13,8 +11,8 @@ SANDTON_DATES = "%Y-%m-%d %H:%M"
 
 
 def make_row(**changes):
-    """A valid Sandton row. Each test changes only the value it is testing."""
-    row = {"file": "test.csv", "row": 2, "branch": "SANDTON", "transaction_id": "SDN-1",
+    # A valid row. Each test changes only the value it is testing.
+    row ={"file": "test.csv", "row": 2, "branch": "SANDTON", "transaction_id": "SDN-1",
            "date": "2026-09-05 14:41", "sku": "EL-1001", "quantity": "2", "price": "549.00", "payment": "Card"}
     row.update(changes)
     return row
@@ -58,7 +56,7 @@ class DateTests(unittest.TestCase):
 
     def test_impossible_date_is_rejected(self):
         with self.assertRaises(ValueError):
-            clean_date("2026-09-31 10:15", SANDTON_DATES)  # September has 30 days
+            clean_date("2026-09-31 10:15", SANDTON_DATES)
 
 
 class StandardiseTests(unittest.TestCase):

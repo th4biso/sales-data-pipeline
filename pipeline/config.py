@@ -1,17 +1,10 @@
-"""Settings: where the files are, and how each branch formats its sales export.
-
-To add a new branch, add an entry to BRANCHES. No new code is needed.
-"""
-
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-RAW_DIR = PROJECT_ROOT / "data" / "raw"
-PRODUCTS_FILE = PROJECT_ROOT / "data" / "reference" / "products.csv"
-OUTPUT_DIR = PROJECT_ROOT / "output"
+RAW_DIR = Path("data/raw")
+PRODUCTS_FILE = Path("data/reference/products.csv")
+OUTPUT_DIR = Path("output")
 
 # Each branch sends the same information in a different format.
-# "columns" maps our standard name -> the column name in that branch's file.
 BRANCHES = {
     "SANDTON": {
         "file": "sandton_sales_*.csv",
@@ -36,7 +29,7 @@ BRANCHES = {
     },
 }
 
-# Every way the branches write a payment method -> one standard name.
+# Every way the branches write a payment method must use one standard name in the final output.
 PAYMENT_METHODS = {
     "card": "card", "credit card": "card", "debit card": "card", "visa": "card", "mastercard": "card",
     "cash": "cash",

@@ -1,8 +1,3 @@
-"""Run the whole pipeline: extract -> transform -> load -> report.
-
-    python run_pipeline.py
-"""
-
 import logging
 import sys
 
@@ -42,8 +37,8 @@ def run(raw_dir=config.RAW_DIR, output_dir=config.OUTPUT_DIR):
 
 
 def main():
-    # Log to the screen and to output/pipeline.log
     config.OUTPUT_DIR.mkdir(exist_ok=True)
+    # Log to the screen and to output/pipeline.log
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s  %(message)s",
