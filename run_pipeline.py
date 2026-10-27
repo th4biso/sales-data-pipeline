@@ -1,7 +1,7 @@
 import logging
 import sys
 
-from pipeline import config, extract, load, report, transform
+from pipeline import config, dashboard, extract, load, report, transform
 
 log = logging.getLogger("pipeline")
 
@@ -13,10 +13,12 @@ def run(raw_dir=config.RAW_DIR, output_dir=config.OUTPUT_DIR):
 
     totals = {"read": 0, "loaded": 0, "rejected": 0}
     all_rejected = []
+    processed = []
     conn = load.connect(output_dir / "warehouse.db")
     try:
         for path, branch, settings in files:
             rows = extract.read_file(path, branch, settings)
+            processed.append((path, branch, settings, rows))
             clean, rejected = transform.transform(rows, products, settings["date_format"])
             new = load.save_sales(conn, clean)
             log.info("%-28s read %3d  clean %3d  new %3d  rejected %2d",
@@ -28,11 +30,13 @@ def run(raw_dir=config.RAW_DIR, output_dir=config.OUTPUT_DIR):
 
         load.save_rejects(output_dir / "rejects.csv", all_rejected)
         report.write_reports(conn, output_dir / "reports")
+        dashboard.write_dashboard(output_dir / "index.html", conn, processed, all_rejected, products, totals)
     finally:
         conn.close()
 
     log.info("Done: %d new sales saved, %d rows rejected (see output/rejects.csv)",
              totals["loaded"], totals["rejected"])
+    log.info("Dashboard: %s", output_dir / "index.html")
     return totals
 
 

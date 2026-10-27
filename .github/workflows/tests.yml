@@ -1,11 +1,19 @@
-name: Continuous Integration
+name: CI/CD
 
 on:
   push:
   pull_request:
+  schedule:
+    - cron: "0 4 * * *"      # every day at 04:00 UTC (06:00 in South Africa)
+  workflow_dispatch:          # adds a "Run workflow" button on GitHub
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  test:
+  test:                       # CI: check the code works
     runs-on: ubuntu-latest
     steps:
       - name: Get the code
@@ -19,5 +27,30 @@ jobs:
       - name: Run the 19 unit and end-to-end tests
         run: python -m unittest discover -s tests -t . -v
 
-      - name: Run the pipeline on the sample data
+  deploy:                     # CD: run the pipeline and publish the dashboard
+    needs: test               # only runs if the tests passed
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the pipeline
         run: python run_pipeline.py
+
+      - name: Upload the dashboard
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

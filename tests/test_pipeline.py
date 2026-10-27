@@ -45,11 +45,12 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(rejects), totals["rejected"])
         self.assertTrue(all(row["reason"] for row in rejects))
 
-    def test_reports_are_created(self):
+    def test_reports_and_dashboard_are_created(self):
         self.run_pipeline()
         for name in ["branch_summary.csv", "daily_sales.csv", "top_products.csv", "payment_methods.csv"]:
             with self.subTest(report=name):
                 self.assertTrue((self.output / "reports" / name).exists())
+        self.assertTrue((self.output / "index.html").exists())
 
     def test_running_twice_adds_no_duplicates(self):
         first = self.run_pipeline()

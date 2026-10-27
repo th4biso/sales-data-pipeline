@@ -2,9 +2,11 @@
 
 ![tests](https://github.com/th4biso/sales-data-pipeline/actions/workflows/tests.yml/badge.svg)
 
-A Python ETL pipeline that collects sales exports from three branches of a retailer, cleans and standardises them, and loads them into a SQLite database. GitHub Actions runs the tests and the pipeline automatically on every push.
+A Python ETL pipeline that collects sales exports from three branches of a retailer, cleans and standardises them, and loads them into a SQLite database. GitHub Actions tests every push, then runs the pipeline and deploys a dashboard to GitHub Pages.
 
-**Tech:** Python · SQLite · GitHub Actions · `unittest` (standard library only, nothing to install)
+**Live dashboard:** https://th4biso.github.io/sales-data-pipeline/
+
+**Tech:** Python · SQLite · GitHub Actions · GitHub Pages · `unittest` (standard library only, nothing to install)
 
 ## The problem
 
@@ -33,6 +35,7 @@ data/raw  ->  Extract  ->  Transform  ->  Load (SQLite)  ->  Reports
 | Transform | `pipeline/transform.py` | Cleans and checks every row; bad rows are rejected with a reason |
 | Load | `pipeline/load.py` | Saves clean sales to SQLite and rejected rows to a CSV |
 | Report | `pipeline/report.py` | SQL reports: revenue by branch, daily sales, top products, payment methods |
+| Dashboard | `pipeline/dashboard.py` | A web page: the raw data, before and after cleaning, then the results |
 | Run | `run_pipeline.py` | Runs all the steps in order and logs what happened |
 
 ### Cleaning rules
@@ -66,6 +69,7 @@ Output:
 
 ```
 output/
+  index.html            the dashboard (open it in a browser)
   warehouse.db          SQLite database (table: sales)
   rejects.csv           every rejected row with the reason
   reports/              branch_summary, daily_sales, top_products, payment_methods (CSV)
@@ -84,15 +88,25 @@ Done: 438 new sales saved, 16 rows rejected (see output/rejects.csv)
 
 Running it again straight away saves `0` new sales, because they are already in the database.
 
-## Tests and CI
+## CI/CD
 
-19 tests with Python's `unittest`, run by GitHub Actions on every push and pull request (`.github/workflows/tests.yml`):
+`.github/workflows/tests.yml` has two jobs:
+
+| Job | When | What it does |
+|---|---|---|
+| **test** (CI) | Every push and pull request | Runs the 19 tests on a fresh Ubuntu machine |
+| **deploy** (CD) | After the tests pass on `main`, and every day at 06:00 | Runs the pipeline and deploys the dashboard to GitHub Pages |
+
+If a test fails, nothing is deployed and GitHub sends an email.
+
+## Tests
+
+19 tests with Python's `unittest`:
 
 - **14 unit tests** for the cleaning rules: prices, quantities, dates, product codes, payment methods, rejects and duplicates.
-- **5 end-to-end tests** that run the whole pipeline in a temporary folder: good rows are loaded, every reject has a reason, the reports are created, a second run adds no duplicates, and a new sale is picked up.
+- **5 end-to-end tests** that run the whole pipeline in a temporary folder: good rows are loaded, every reject has a reason, the reports and dashboard are created, a second run adds no duplicates, and a new sale is picked up.
 
 ## Next steps
 
-- Schedule it to run daily (a scheduled GitHub Actions workflow or cron).
 - Package it in Docker.
 - Load into PostgreSQL instead of SQLite.
