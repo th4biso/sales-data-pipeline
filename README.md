@@ -2,11 +2,9 @@
 
 ![tests](https://github.com/th4biso/sales-data-pipeline/actions/workflows/tests.yml/badge.svg)
 
-A Python ETL pipeline that collects sales exports from three branches of a retailer, cleans and standardises them, and loads them into a SQLite database. GitHub Actions tests every push, then runs the pipeline and deploys a dashboard to GitHub Pages.
+A Python ETL pipeline that collects sales exports from three branches of a retailer, cleans and standardises them, and loads them into a SQLite database. It also creates a dashboard page. GitHub Actions runs the tests and the pipeline automatically on every push.
 
-**Live dashboard:** https://th4biso.github.io/sales-data-pipeline/
-
-**Tech:** Python · SQLite · GitHub Actions · GitHub Pages · Docker · `unittest` (standard library only, nothing to install)
+**Tech:** Python · SQLite · GitHub Actions · Docker · `unittest` (standard library only, nothing to install)
 
 ## The problem
 
@@ -114,16 +112,9 @@ docker stop dashboard
 docker rm dashboard
 ```
 
-## CI/CD
+## Continuous Integration
 
-`.github/workflows/tests.yml` has two jobs:
-
-| Job | When | What it does |
-|---|---|---|
-| **test** (CI) | Every push and pull request | Runs the 19 tests on a fresh Ubuntu machine |
-| **deploy** (CD) | After the tests pass on `main`, and every day at 06:00 | Runs the pipeline and deploys the dashboard to GitHub Pages |
-
-If a test fails, nothing is deployed and GitHub sends an email.
+`.github/workflows/tests.yml` runs on every push and pull request. GitHub starts a fresh Ubuntu machine, gets the code, installs Python 3.12, runs the 19 tests, then runs the pipeline on the sample data. If anything fails, the run turns red and GitHub sends an email.
 
 ## Tests
 
