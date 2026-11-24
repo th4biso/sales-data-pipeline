@@ -21,3 +21,28 @@ jobs:
 
       - name: Run the pipeline on the sample data
         run: python run_pipeline.py
+
+        
+  deliver:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v6
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the pipeline
+        run: python run_pipeline.py
+
+      - name: Publish the output as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-output-${{ github.sha }}
+          path: output/
+          if-no-files-found: error
+          retention-days: 30
