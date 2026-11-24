@@ -74,43 +74,8 @@ output/
   pipeline.log          log of every run
 ```
 
-## Example run
-
-```
-Found 3 file(s) in data\raw
-sandton_sales_2026-09.csv    read 182  clean 175  new 175  rejected  7
-durban_sales_2026-09.csv     read 141  clean 136  new 136  rejected  5
-online_orders_2026-09.json   read 131  clean 127  new 127  rejected  4
-Done: 438 new sales saved, 16 rows rejected (see output/rejects.csv)
-```
-
 Running it again straight away saves `0` new sales, because they are already in the database.
 
-## Running it with Docker
-
-The `Dockerfile` packages the pipeline with Python 3.12 on Linux, so it runs the same on any machine without installing Python:
-
-| Dockerfile line | What it does |
-|---|---|
-| `FROM python:3.12-slim` | Start from Linux (Debian) with Python 3.12 |
-| `WORKDIR /app` | Work inside `/app` |
-| `COPY . .` | Copy the project in (`.dockerignore` leaves out `output/`, `.git/` and `__pycache__/`) |
-| `CMD ["python", "run_pipeline.py"]` | Run the pipeline when the container starts |
-
-Build the image, then run the pipeline in a container. The volume (`-v`) saves the output to your computer (PowerShell):
-
-```bash
-docker build -t sales-pipeline .
-docker run --rm -v "${PWD}\output:/app/output" sales-pipeline
-```
-
-Serve the dashboard from an nginx container at http://localhost:8080:
-
-```bash
-docker run -d -p 8080:80 --name dashboard -v "${PWD}\output:/usr/share/nginx/html:ro" nginx
-docker stop dashboard
-docker rm dashboard
-```
 
 ## Continuous Integration
 
@@ -123,7 +88,4 @@ docker rm dashboard
 - **14 unit tests** for the cleaning rules: prices, quantities, dates, product codes, payment methods, rejects and duplicates.
 - **5 end-to-end tests** that run the whole pipeline in a temporary folder: good rows are loaded, every reject has a reason, the reports and dashboard are created, a second run adds no duplicates, and a new sale is picked up.
 
-## Next steps
 
-- Build the Docker image in GitHub Actions and push it to a container registry.
-- Load into PostgreSQL instead of SQLite.
